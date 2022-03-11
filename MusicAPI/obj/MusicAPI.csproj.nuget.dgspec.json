@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luise\\source\\repos\\MusicAPI\\MusicAPI\\MusicAPI.csproj": {}
+    "C:\\Users\\luis.vega\\source\\repos\\LuisVega91\\trainigMusicAPI\\MusicAPI\\MusicAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luise\\source\\repos\\MusicAPI\\MusicAPI\\MusicAPI.csproj": {
+    "C:\\Users\\luis.vega\\source\\repos\\LuisVega91\\trainigMusicAPI\\MusicAPI\\MusicAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luise\\source\\repos\\MusicAPI\\MusicAPI\\MusicAPI.csproj",
+        "projectUniqueName": "C:\\Users\\luis.vega\\source\\repos\\LuisVega91\\trainigMusicAPI\\MusicAPI\\MusicAPI.csproj",
         "projectName": "MusicAPI",
-        "projectPath": "C:\\Users\\luise\\source\\repos\\MusicAPI\\MusicAPI\\MusicAPI.csproj",
-        "packagesPath": "C:\\Users\\luise\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luise\\source\\repos\\MusicAPI\\MusicAPI\\obj\\",
+        "projectPath": "C:\\Users\\luis.vega\\source\\repos\\LuisVega91\\trainigMusicAPI\\MusicAPI\\MusicAPI.csproj",
+        "packagesPath": "C:\\Users\\luis.vega\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luis.vega\\source\\repos\\LuisVega91\\trainigMusicAPI\\MusicAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\luise\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\luis.vega\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
