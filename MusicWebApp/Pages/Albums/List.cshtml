@@ -1,0 +1,49 @@
+﻿@page
+@model MusicWebApp.Pages.Albums.ListModel
+@{
+    ViewData["Title"] = "Consulta Albums";
+}
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+
+            @if (Model.albums.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Año</th>
+                        <th>Band Name</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                    @foreach (var item in Model.albums)
+                    {
+                        <tr>
+                            <td> @Html.DisplayFor(m => item.Id) </td>
+                            <td> @Html.DisplayFor(m => item.Name) </td>
+                            <td> @Html.DisplayFor(m => item.Year) </td>
+                            <td> @Html.DisplayFor(m => item.BandName) </td>
+                            <td>
+                                <a asp-route-id="@item.Id" asp-page="Form" class="btn btn-success btn-sm">Editar</a>
+                                <button asp-page-handler="Borrar" asp-route-id="@item.Id" class="btn-primary btn-danger btn-sm" onclick="return confirm('¿Desea borrar el album?')">Borrar</button>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No se encuentran albums registrados</p>
+            }
+        </form>
+
+        <div class="row">
+            <div class="col text-center">
+                <a class="btn btn-success btn-lg m-2" asp-area="" asp-page="Form">Crear Album</a>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@page
+@model MusicWebApp.Pages.Bands.ListModel
+@{
+    ViewData["Title"] = "Consulta Bands";
+}
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+
+            @if (Model.bands.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+
+                    @foreach (var item in Model.bands)
+                    {
+                        <tr>
+                            <td> @Html.DisplayFor(m => item.Id) </td>
+                            <td> @Html.DisplayFor(m => item.Name) </td>
+                            
+                            <td>
+                                <a asp-route-id="@item.Id" asp-page="Form" class="btn btn-success btn-sm">Editar</a>
+                                <button asp-page-handler="Borrar" asp-route-id="@item.Id" class="btn-primary btn-danger btn-sm" onclick="return confirm('¿Desea borrar el band?')">Borrar</button>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>No se encuentran bands registrados</p>
+            }
+        </form>
+
+        <div class="row">
+            <div class="col text-center">
+                <a class="btn btn-success btn-lg m-2" asp-area="" asp-page="Form">Crear Band</a>
+            </div>
+        </div>
+
+    </div>
+</div>

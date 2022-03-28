@@ -1,0 +1,25 @@
+﻿@page
+@model MusicWebApp.Pages.Bands.FormModel
+@{  
+    ViewData["Title"] = "Editar Banda";
+}
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <div class="row mb-2">
+                <input type="hidden" asp-for="band.Id" class="form-control" id="validationId" />
+                <div class="col-4">
+                    <label for="validationName" class="form-label">Nombre</label>
+                    <input type="text" asp-for="band.Name" class="form-control" id="validationName" required />
+                </div>
+     
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-end">
+                    <button asp-page-handler="Guardar" asp-route-id="@Model.band?.Id" class="btn btn-primary" onclick="return confirm('¿Desea guardar el band?')">Guardar Banda</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

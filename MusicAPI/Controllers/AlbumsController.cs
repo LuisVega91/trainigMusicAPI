@@ -24,9 +24,23 @@ namespace MusicAPI.Controllers
 
         // GET: api/Albums
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Album>>> GetAlbums()
+        public async Task<ActionResult<IEnumerable<AlbumWithBandName>>> GetAlbums()
         {
-            return await _context.Albums.ToListAsync();
+
+           return await _context.Albums.Join(
+                _context.Bands.IgnoreAutoIncludes(),
+                a => a.BandId,
+                b => b.Id,
+                AlbumWithBandName (a,b) => new AlbumWithBandName
+                {
+                    Id = a.Id,
+                    Name = a.Name,
+                    Year = a.Year,
+                    BandId = a.BandId,
+                    BandName = b.Name
+                }
+                ).ToListAsync();
+
         }
 
         // GET: api/Albums/5

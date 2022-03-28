@@ -11,7 +11,7 @@ using MusicAPI.Context;
 namespace MusicAPI.Migrations
 {
     [DbContext(typeof(MusicDbContext))]
-    [Migration("20220311182804_AlbumsBandsRelation")]
+    [Migration("20220314190527_AlbumsBandsRelation")]
     partial class AlbumsBandsRelation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,7 +36,8 @@ namespace MusicAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
@@ -58,7 +59,8 @@ namespace MusicAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 

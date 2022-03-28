@@ -1,0 +1,42 @@
+﻿@page
+@model MusicWebApp.Pages.Albums.FormModel
+@{
+    ViewData["Title"] = "Editar Album";
+}
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+            <div class="row mb-2">
+                <input type="hidden" asp-for="album.Id" class="form-control" id="validationId" />
+                <div class="col-4">
+                    <label for="validationName" class="form-label">Nombre</label>
+                    <input type="text" asp-for="album.Name" class="form-control" id="validationName" required />
+                </div>
+                <div class="col-4">
+                    <label for="validationYear" class="form-label">Year</label>
+                    <input type="text" asp-for="album.Year" class="form-control" id="validationYear" required />
+                </div>
+                <div class="col-4">
+                    <label for="validationBandId" class="form-label">BandId</label>
+
+
+                    <select asp-for="album.bandId" data-val="true" class="form-control" id="validationBandId">
+                        <option value="">Seleccione una</option>
+                        @foreach (var item in Model.bands)
+                        {
+                            <option value="@item.Id">@Html.DisplayFor(m => item.Name)</option>
+                        }
+
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-end">
+                    <button asp-page-handler="Guardar" asp-route-id="@Model.album.Id" class="btn btn-primary" onclick="return confirm('¿Desea guardar el album?')">Guardar Album</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

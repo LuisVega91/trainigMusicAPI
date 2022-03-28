@@ -13,4 +13,5 @@ namespace MusicAPI.Models
 
         public List<Album> Albums { get; set; }
     }
+
 }

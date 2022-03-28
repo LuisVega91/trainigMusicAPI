@@ -15,6 +15,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\luis.vega\source\repos\LuisVega91\trainigMusicAPI\MusicWebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/luis.vega/source/repos/LuisVega91/trainigMusicAPI/MusicWebApp/Pages/Albums/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXEZvcm0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luis.vega/source/repos/LuisVega91/trainigMusicAPI/MusicWebApp/Pages/Albums/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxidW1zXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luis.vega/source/repos/LuisVega91/trainigMusicAPI/MusicWebApp/Pages/Bands/Form.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFuZHNcRm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/luis.vega/source/repos/LuisVega91/trainigMusicAPI/MusicWebApp/Pages/Bands/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFuZHNcTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/luis.vega/source/repos/LuisVega91/trainigMusicAPI/MusicWebApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
